@@ -8,6 +8,50 @@
 	<link rel="stylesheet" href="css/main.scss" />
 </head>
 <body>
-	<include src="./sections/header/header.html"></include>
+	<include src="./blocks/svg/svg.html"></include>
+	<include src="./sections/welcome/welcome.html"></include>
+	<include src="./sections/features/features.html"></include>
+	<include src="./sections/our-courses/our-courses.html"></include>
+	<include src="./sections/stats/stats.html"></include>
+	<include src="./sections/contact/contact.html"></include>
+	<include src="./sections/footer/footer.html"></include>
+
+	<script>
+		(function() {
+			const menuButton = document.querySelector("#menu");
+			const headerItems = document.querySelector("#header-items")
+			const features = document.querySelector("#features")
+			const welcome = document.querySelector("#welcome")
+			const header = document.querySelector("#header")
+
+			menuButton.addEventListener('click', function() {
+
+				if(!headerItems.classList.contains("header__items_mobile-show"))
+					headerItems.classList.add("header__items_mobile-show");
+				else
+					headerItems.classList.remove("header__items_mobile-show");
+			});
+
+			const headerObserver = new IntersectionObserver(entries => {
+				if(entries.every(entry => !entry.isIntersecting))
+				{
+					header.classList.add("header_sticky");
+					welcome.classList.add("welcome_headerless")
+				}
+				else
+				{
+					header.classList.add("header_sticky-out");
+					setTimeout(() =>
+						{
+							welcome.classList.remove("welcome_headerless")
+							header.classList.remove("header_sticky");
+							header.classList.remove("header_sticky-out");
+						}, 100);
+				}
+			});
+
+			headerObserver.observe(welcome);
+		}())
+	</script>
 </body>
 </html>

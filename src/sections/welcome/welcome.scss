@@ -1,0 +1,72 @@
+.welcome {
+	width: 100%;
+	min-height: 100vh;
+
+	background-image: url('/static/top-bg.svg');
+	background-repeat: no-repeat;
+
+	background-size: cover;
+	background-position: bottom;
+
+	margin-bottom: 4rem;
+}
+
+.welcome__main {
+	display: flex;
+	padding: 8rem 0;
+}
+
+.welcome__text {
+	flex-basis: 50%;
+}
+
+.welcome__caption {
+	margin-bottom: 2rem;
+}
+
+.welcome__editor {
+	flex-basis: 50%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.welcome__ide {
+	position: relative;
+}
+
+.welcome__ide-bg {
+	display: block;
+}
+
+.welcome__ide-video {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+}
+
+.welcome_headerless {
+	padding-top: 133px;
+}
+
+@media only screen and (max-width: $lg) {
+	.our-courses {
+		padding: 10rem 2rem;
+	};
+}
+
+@media only screen and (max-width: $md) {
+	.welcome__main {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.welcome__text {
+		width: 476px;
+		margin: 0 auto;
+		margin-bottom: 2rem;
+	}
+
+	.welcome__editor {
+		justify-content: center;
+	}
+}

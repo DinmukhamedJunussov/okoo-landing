@@ -1,0 +1,30 @@
+.button {
+	border: none;
+
+	border-radius: 4px;
+	border: 1px solid $primary;
+	background-color: $primary;
+	padding: .5rem 1rem;
+	font-size: 1rem;
+	color: white;
+	font-family: SF UI Display;
+}
+
+.button_inverse-white {
+	background-color: transparent;
+	border-color: white;
+
+	&:hover {
+		background-color: white;
+		color: $primary;
+		cursor: pointer;
+	}
+}
+
+.button_wide {
+	width: 100%;
+}
+
+.button_small {
+	font-size: 0.875rem;
+}

@@ -1,0 +1,107 @@
+$barWidth: 0.3rem;
+$baseBarHeight: .5;
+$barHeightIncr: .25;
+$barMargin: .22rem;
+$fontSize: .875rem;
+
+.card {
+	width: 22rem;
+	height: 25rem;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.card__image-holder {
+	width: 100%;
+	height: 8rem;
+	border-bottom: 1px solid $gray;
+
+	display: flex;
+	justify-content: center;
+}
+
+.card__body {
+	height: 17rem;
+	padding: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card__heading {
+	font-weight: 500;
+	line-height: 120%;
+	font-size: 1.125rem;
+	color: $primaryBlack;
+
+	margin-bottom: 1rem;
+}
+
+.card__meta-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	margin-bottom: 1rem;
+}
+
+.card__time {
+	display: flex;
+	align-items: flex-end;
+}
+
+.card__time-text {
+	font-size: $fontSize;
+
+	margin-left: .5rem;
+}
+
+.card__difficulty {
+	display: flex;
+	align-items: flex-end;
+}
+
+.card__difficulty-bars {
+	display: flex;
+	align-items: flex-end;
+}
+
+.card__difficulty-bar-1 {
+	width: $barWidth;
+	height: #{$baseBarHeight}rem;
+	background-color: $gray;
+
+	margin-right: $barMargin;
+}
+
+.card__difficulty-bar-2 {
+	width: $barWidth;
+	height: #{$baseBarHeight + $barHeightIncr}rem;
+	background-color: $gray;
+
+	margin-right: $barMargin;
+}
+
+.card__difficulty-bar-3 {
+	width: $barWidth;
+	height: #{$baseBarHeight + 2 * $barHeightIncr}rem;
+	background-color: $gray;
+
+	margin-right: $barMargin;
+}
+
+.card__difficulty-bar_active {
+	background-color: $primary;
+}
+
+.card__difficulty-text {
+	font-size: .875rem;
+	margin-left: .4rem;
+}
+
+.card__description {
+	font-size: .875rem;
+	line-height: 130%;
+
+	margin-top: 1rem;
+}

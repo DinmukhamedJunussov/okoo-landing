@@ -1,0 +1,18 @@
+.footer {
+	height: 11rem;
+	background-color: $footer;
+	padding: 0 4rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer__items {
+
+}
+
+.footer__item {
+	color: white;
+	font-size: 1.125rem;
+}

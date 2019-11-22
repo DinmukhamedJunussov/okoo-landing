@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="476px" height="269px" viewBox="0 0 476 269" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>window</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="476" height="269" rx="10"></rect>
+    </defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-829.000000, -246.000000)" id="window">
+            <g transform="translate(829.000000, 246.000000)">
+                <g>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <rect id="Rectangle" fill="#F2F2F2" mask="url(#mask-2)" x="0" y="0" width="476" height="30"></rect>
+                </g>
+                <g id="window-control" transform="translate(16.000000, 8.000000)">
+                    <circle id="Oval" fill="#FF3B30" cx="6.5" cy="6.5" r="6.5"></circle>
+                    <circle id="Oval-Copy" fill="#C1C1CA" cx="29.5" cy="6.5" r="6.5"></circle>
+                    <circle id="Oval-Copy-2" fill="#28CD41" cx="52.5" cy="6.5" r="6.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
