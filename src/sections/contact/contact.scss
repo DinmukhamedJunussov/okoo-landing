@@ -3,6 +3,7 @@
 	padding: 10rem 8rem;
 
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .contact__heading {
@@ -22,7 +23,7 @@
 
 .contact__okoo {
 	font-weight: 600;
-	color: $primary;
+	color: var(--primary, black);;
 }
 
 .contact__form {
@@ -31,4 +32,28 @@
 
 .contact__input {
 	margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: $md) {
+	.contact__info {
+		margin-bottom: 3rem;
+	}
+
+	.contact {
+		padding: 10rem 4rem;
+	}
+}
+
+@media only screen and (max-width: $md) {
+	.contact {
+		padding: 10rem 2rem;
+	}
+
+	.contact__heading {
+		margin-bottom: 3rem;
+	}
+
+	.contact__body {
+		flex-direction: column;
+	}
 }

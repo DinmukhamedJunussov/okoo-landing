@@ -20,7 +20,17 @@
 	margin: 0 auto;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (min-width: var(--xlg, 0px)) {
+	.our-courses__heading {
+		margin-bottom: 8rem;
+	}
+
+	.our-courses {
+		padding: 10rem 12rem;
+	};
+}
+
+@media only screen and (max-width: $lg) {
 	.our-courses {
 		padding: 10rem 0rem;
 	};
@@ -30,7 +40,7 @@
 	}
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: $md) {
 	.our-courses {
 		background-image: url('/static/our-courses-bg-small.svg');
 		padding: 12rem 0rem;

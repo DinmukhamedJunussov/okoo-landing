@@ -1,1 +1,1 @@
-npx parcel src/index.html
+npx parcel src/index.html src/messageResponse.html

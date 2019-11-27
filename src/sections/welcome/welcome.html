@@ -1,7 +1,7 @@
 <section id="welcome" class="welcome">
 	<header id="header" class="header">
 		<div class="header__mobile-top">
-			<a href="#welcome" class="header__logo">
+			<a href="#welcome" id="welcome-logo" class="header__logo">
 				<include src="./static/logo.svg"/>
 			</a>
 
@@ -11,30 +11,45 @@
 		</div>
 
 		<nav id="header-items" class="header__items">
+			<a class="header__telephone" href="tel:+77474425294">
+				<span class="icon_telephone icon_left"> </span> +7 (747) 442-52-94
+			</span>
 			<a href="#features" class="header__item">Особенности</a>
 			<a href="#courses" class="header__item">Курсы</a>
 			<a href="#stats" class="header__item">Школы</a>
 			<a href="#contacts" class="header__item">Контакты</a>
-			<a href="#register" class="header__item">
-				<button class="button button_inverse-white">
-					Зарегистрироваться
-				</button>
-			</a>
+			<span>
+				<a href="/auth/signin" class="header__item header__item_space">
+					<button class="button button_inverse-white">
+						Войти
+					</button>
+				</a>
+				<a href="/auth/signup" class="header__item">
+					<button class="button button_inverse-white">
+						Зарегистрироваться
+					</button>
+				</a>
+			</span>
 		</nav>
 	</header>
 	<div class="content">
 		<main class="welcome__main">
 			<div class="welcome__text">
 				<h1 class="heading heading_white"> Программировать просто, мы научим! </h1>
-				<h5 class="caption caption_white welcome__caption"> Онлайн обучение и олимпиады по программированию в вашей школе! </h5>
-				<button class="button button_inverse-white">
-					Присоединиться
-				</button>
+				<h2 class="caption caption_white welcome__caption"> Okoo - это цифровая школа нового поколения. Онлайн обучение и олимпиады по программированию в вашей школе! </h2>
+				<a class="welcome__signup" href="/auth/signup">
+					<button class="button button_inverse-white">
+						Присоединиться
+					</button>
+				</a>
+				<a class="welcome__signin" href="/auth/signin">
+					У меня есть аккаунт
+				</a>
 			</div>
 			<div class="welcome__editor">
 				<div class="welcome__ide">
-					<img class="welcome__ide-bg" src="static/window.svg"/>
-					<video class="welcome__ide-video" autoplay loop muted>
+					<img class="welcome__ide-bg" src="static/window.svg" alt="ide"/>
+					<video class="welcome__ide-video" autoplay loop muted playsinline>
 						<source src="static/okoo-code.mp4" type="video/mp4">
 					</video>
 				</div>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Okoo</title>
+	<title>Okoo - онлайн школа</title>
+	<link rel="stylesheet" href="css/common.scss" />
 	<link rel="stylesheet" href="css/main.scss" />
+	<include src="./sections/meta/meta.html"></include>
 </head>
 <body>
 	<include src="./blocks/svg/svg.html"></include>
@@ -19,20 +21,49 @@
 	<script>
 		(function() {
 			const menuButton = document.querySelector("#menu");
-			const headerItems = document.querySelector("#header-items")
-			const features = document.querySelector("#features")
+			const headerItemsContainer = document.querySelector("#header-items")
 			const welcome = document.querySelector("#welcome")
+			const features = document.querySelector("#features")
 			const header = document.querySelector("#header")
+			const courses = document.querySelector("#courses")
+			const stats = document.querySelector("#stats")
+			const contacts = document.querySelector("#contacts")
+			const headerItems =
+			[
+				document.querySelector("#logo"),
+				...document.querySelectorAll("#header-items > a.header__item")
+			]
+			const SCROLL_OFFSET = 80;
+
+			const anchors = [ welcome, features, courses,  stats, contacts];
+
+			function openHeader() {
+				headerItemsContainer.classList.add("header__items_mobile-show");
+			}
+
+			function closeHeader() {
+				headerItemsContainer.classList.remove("header__items_mobile-show");
+			}
 
 			menuButton.addEventListener('click', function() {
 
-				if(!headerItems.classList.contains("header__items_mobile-show"))
-					headerItems.classList.add("header__items_mobile-show");
+				if(!headerItemsContainer.classList.contains("header__items_mobile-show"))
+					openHeader()
 				else
-					headerItems.classList.remove("header__items_mobile-show");
+					closeHeader()
 			});
 
-			const headerObserver = new IntersectionObserver(entries => {
+			anchors.forEach((a, idx) =>
+			{
+				headerItems[idx].addEventListener('click', e =>
+				{
+					e.preventDefault();
+					window.scrollTo({ top: a.offsetTop - SCROLL_OFFSET, behavior: "smooth" });
+					closeHeader();
+				})
+			})
+
+			const welcomeObserver = new IntersectionObserver(entries => {
 				if(entries.every(entry => !entry.isIntersecting))
 				{
 					header.classList.add("header_sticky");
@@ -50,8 +81,30 @@
 				}
 			});
 
-			headerObserver.observe(welcome);
+			const headerObserver = new IntersectionObserver(entries => {
+				if(entries.every(entry => !entry.isIntersecting))
+				{
+					header.classList.add("header_sticky-prep");
+				}
+				else
+				{
+					header.classList.remove("header_sticky-prep");
+				}
+			})
+
+			welcomeObserver.observe(welcome);
+			headerObserver.observe(header);
+
+
+			const contactEmail = document.querySelector("#contact-email");
+			const contactMessage = document.querySelector("#contact-message");
+			const contactSend = document.querySelector("#contact-send");
 		}())
+	</script>
+
+	<script type="text/javascript" src="./libs/particles.js"></script>
+	<script>
+		particlesJS.load('welcome', '/particles.json')
 	</script>
 </body>
 </html>

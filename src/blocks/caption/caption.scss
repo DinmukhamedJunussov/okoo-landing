@@ -9,5 +9,5 @@
 }
 
 .caption_black {
-	color: $weakBlack;
+	color: var(--weakBlack, black);
 }

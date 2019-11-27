@@ -11,9 +11,21 @@
 	margin-bottom: 4rem;
 }
 
+.particles-js-canvas-el {
+	position: absolute;
+	left: 0 !important;
+	top: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+	z-index: 10 !important;
+}
+
 .welcome__main {
+	position: relative;
 	display: flex;
 	padding: 8rem 0;
+
+	z-index: 1000;
 }
 
 .welcome__text {
@@ -22,6 +34,19 @@
 
 .welcome__caption {
 	margin-bottom: 2rem;
+}
+
+.welcome__signup {
+	margin-right: 1rem;
+}
+
+.welcome__signin {
+	color: white;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .welcome__editor {
@@ -36,6 +61,7 @@
 
 .welcome__ide-bg {
 	display: block;
+	width: 100%;
 }
 
 .welcome__ide-video {
@@ -46,6 +72,12 @@
 
 .welcome_headerless {
 	padding-top: 133px;
+}
+
+@media only screen and (min-width: $xlg) {
+	.welcome__editor {
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width: $lg) {
@@ -61,12 +93,16 @@
 	}
 
 	.welcome__text {
-		width: 476px;
+		max-width: 476px;
 		margin: 0 auto;
 		margin-bottom: 2rem;
 	}
 
 	.welcome__editor {
 		justify-content: center;
+	}
+
+	.welcome__ide {
+		overflow: hidden;
 	}
 }

@@ -23,7 +23,6 @@
 
 .features__image-1 {
 	background-image: url('/static/img1.png');
-
 }
 
 .features__image-2 {
@@ -46,4 +45,62 @@
 
 .features__text {
 	width: 100%;
+}
+
+@media only screen and (min-width: $xlg) {
+	.features__text-container {
+		margin: 0;
+	}
+
+	.features__figure_reverse {
+
+		.features__image__container {
+			background-position-x: right;
+		}
+	}
+}
+
+@media only screen and (max-width: $md) {
+	.features__figure {
+		flex-direction: column-reverse;
+	}
+
+	.features__image__container {
+		flex-basis: auto;
+	}
+
+	.features__figure_reverse {
+
+		.features__text-container {
+			margin-left: auto;
+		}
+
+		.features__image__container {
+			background-position-x: right;
+		}
+	}
+
+	.features__text-container {
+		flex-basis: auto;
+		width: 40rem;
+		margin: 0;
+		padding: 0 4rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@media only screen and (max-width: $sm) {
+	.features__text-container {
+		padding: 0 2rem;
+		width: 100%;
+	}
+
+	.features__image__container {
+		background-position-y: top;
+		height: 25rem;
+	}
+
+	.features__outer {
+		margin-bottom: 2rem;
+	}
 }

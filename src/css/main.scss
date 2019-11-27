@@ -1,17 +1,13 @@
-@import './reset.scss';
-@import './fonts.scss';
-@import './colors.scss';
 @import './media.scss';
+@import './fonts.scss';
 
 @import '../blocks/header/header.scss';
 @import '../blocks/content/content.scss';
-@import '../blocks/button/button.scss';
-@import '../blocks/caption/caption.scss';
-@import '../blocks/heading/heading.scss';
 @import '../blocks/card/card.scss';
 @import '../blocks/stat/stat.scss';
 @import '../blocks/input/input.scss';
 @import '../blocks/text/text.scss';
+@import '../blocks/icon/icon.scss';
 
 @import '../sections/welcome/welcome.scss';
 @import '../sections/features/features.scss';
@@ -19,18 +15,3 @@
 @import '../sections/stats/stats.scss';
 @import '../sections/contact/contact.scss';
 @import '../sections/footer/footer.scss';
-
-html {
-	font-size: 16px;
-	color: $primaryBlack;
-}
-
-body {
-	font-family: SF UI Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	box-sizing: border-box;
-}
-
-* {
-	box-sizing: inherit;
-	transition: inherit;
-}

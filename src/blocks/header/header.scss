@@ -1,11 +1,15 @@
+$baseHeight: 376;
+$marginTopRem: 1.5;
+
 .header {
+	position: relative;
+	z-index: 100;
 	min-height: 50px;
 	width: 100%;
 	padding: 3rem 4rem;
 	display: flex;
 	align-items: center;
 	background-color: transparent;
-	top: -90px;
 }
 
 .header__toggler {
@@ -16,18 +20,31 @@
 	margin-left: auto;
 }
 
+.header__telephone {
+	color: white;
+	text-decoration: none;
+
+	display: flex;
+	align-items: flex-end;
+	margin-left: 1rem;
+}
+
 .header__items {
 	margin-left: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	// width: 50%;
-	flex-basis: 41rem;
+	flex-basis: 56rem;
 }
 
 .header__item {
 	color: white;
 	text-decoration: none;
+}
+
+.header__item_space {
+	margin-right: .5rem;
 }
 
 .header__mobile-top {
@@ -37,11 +54,12 @@
 
 .header_sticky {
 	padding: 1.5rem 4rem;
-	position: fixed;
-	background-color: $primary;
-	top: 0;
-	transition: padding 0s;
+	position: fixed !important;
+	background-color: var(--primary, black);;
+	top: 0 !important;
 	transition: top .3s ease;
+
+	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
 }
 
 .header_sticky-out {
@@ -49,6 +67,10 @@
 	transition: top .3s ease;
 }
 
+.header_sticky-prep {
+	position: static;
+	top: -90px;
+}
 
 @media only screen and (max-width: $md) {
 	.header__toggler {
@@ -76,14 +98,22 @@
 		display: flex;
 		align-items: center;
 		flex-shrink: 0;
+	}
 
-		&:first-child {
-			margin-top: 1rem;
-		}
+	.header__telephone {
+		display: block;
+		margin-top: #{$marginTopRem}rem;
+		margin-left: 0;
 	}
 
 	.header__items_mobile-show {
-		height: 316px;
+		height: #{$baseHeight + 16 * 1.5}px;
 		transition: height .5s ease;
+	}
+}
+
+@media only screen and (max-width: $sm) {
+	.header {
+		padding: 2rem 1.5rem;
 	}
 }

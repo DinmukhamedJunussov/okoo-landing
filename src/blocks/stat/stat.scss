@@ -1,14 +1,10 @@
-.stat {
-
-}
-
 .stat__number {
 	font-size: 4rem;
-	color: $primary;
+	color: var(--primary, black);;
 	font-weight: 600;
 }
 
 .stat__name {
 	font-size: 2.5rem;
-	color: $primary;
+	color: var(--primary, black);;
 }

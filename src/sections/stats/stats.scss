@@ -1,6 +1,6 @@
 .stats {
 	padding: 4rem;
-	height: 32rem;
+	min-height: 32rem;
 }
 
 .stats__heading {
@@ -14,4 +14,31 @@
 
 	display: flex;
 	justify-content: space-between;
+}
+
+@media only screen and (max-width: $md) {
+	.stats__container {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: $sm) {
+	.stats {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.stats__heading {
+		text-align: start;
+	}
+
+	.stats__container {
+		width: 12rem;
+		flex-direction: column;
+
+		.stat {
+			margin-bottom: 4rem;
+		}
+	}
 }

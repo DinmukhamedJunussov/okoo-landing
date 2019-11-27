@@ -1,7 +1,7 @@
 <section id="contacts" class="contact">
-	<h1 class="heading heading_black contact__heading">
+	<h2 class="heading heading_black contact__heading">
 		Свяжитесь с нами
-	</h1>
+	</h2>
 
 	<div class="contact__body">
 		<div class="contact__info text">
@@ -9,12 +9,16 @@
 			<span class="contact__okoo"> Okoo </span>, или у вас есть вопросы по нашей платформе, напишитей нам сообщение и мы обязательно вам ответим
 		</div>
 
-		<form action="" class="contact__form">
-			<label for="name" class="input__label"> Email </label>
-			<input id="name" class="input contact__input" placeholder="Введите имя"/>
+		<form action="/messageResponse.html" method="post" class="contact__form">
+			<label for="email" class="input__label"> Email </label>
+			<input id="contact-email" name="email" class="input contact__input" placeholder="Введите email"/>
 
 			<label for="message" class="input__label"> Сообщение </label>
-			<textarea id="message" rows="6" class="input" placeholder="Ваше сообщение"/>
+			<textarea id="contact-message" name="text" rows="6" class="input contact__input" placeholder="Ваше сообщение"/>
+
+			<button type="submit" id="contact-send" class="button">
+				Отправить
+			</button>
 		</form>
 	</div>
 </section>

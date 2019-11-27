@@ -2,22 +2,32 @@
 	border: none;
 
 	border-radius: 4px;
-	border: 1px solid $primary;
-	background-color: $primary;
+	border: 1px solid var(--primary, black);;
+	background-color: var(--primary, black);;
 	padding: .5rem 1rem;
 	font-size: 1rem;
 	color: white;
 	font-family: SF UI Display;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--primaryLight, black);
+		border-color: var(--primaryLight, black);
+	}
 }
 
 .button_inverse-white {
 	background-color: transparent;
 	border-color: white;
 
+	transition: background-color .3s, border-color .3s, color .3s;
+
 	&:hover {
 		background-color: white;
-		color: $primary;
+		color: var(--primary, black);;
 		cursor: pointer;
+
+		transition: background-color .3s, border-color .3s, color .3s;
 	}
 }
 

@@ -10,9 +10,9 @@
 }
 
 .heading_black {
-	color: $weakBlack;
+	color: var(--weakBlack, black);
 }
 
 .heading_primary {
-	color: $primary;
+	color: var(--primary, black);;
 }

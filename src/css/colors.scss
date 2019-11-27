@@ -1,5 +1,8 @@
-$primary: #1890FF;
-$weakBlack: rgba(0, 0, 0, 0.65);
-$gray: #E8E8E8;
-$primaryBlack: rgba(0, 0, 0, 0.85);
-$footer: #2B2A2A;
+:root {
+	--primary: #1890FF;
+	--primaryLight: #4ba8ff;
+	--weakBlack: rgba(0, 0, 0, 0.65);
+	--gray: #E8E8E8;
+	--primaryBlack: rgba(0, 0, 0, 0.85);
+	--footer: #2B2A2A;
+}
